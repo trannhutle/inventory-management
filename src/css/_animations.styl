@@ -6,38 +6,41 @@
 */
 
 .order-enter
-  transform: translateX(-120%)
-  transition 0.5s
-  max-height: 0
+  background red
+  transform translateX(-120%)
+  transition .5s
+  max-height 0
   padding 0 !important
   &.order-enter-active
+    background yellow
     max-height 60px
-    transform: translateX(0)
-    padding 2rem 0 !important
+    transform translateX(0)
+    padding 2rem 0  !important
 
 .order-exit
-  transition 0.5s
-  transform: translateX(0)
+  background thistle
+  transition .5s
+  transform translateX(0)
   &.order-exit-active
-    transform: translateX(120%)
-    padding: 0
-
+    background palegoldenrod
+    transform translateX(120%)
+    padding 0 !important
 
 .count-enter
-  background: red
-  transition .5s
+  background red
+  transition 0.5s
   transform translateY(100%)
-  &.count-enter-active
-    background: yellow
+  &.counter-enter-active
+    background yellow
     transform translateY(0)
 
 .count-exit
-  background: black
+  background back
   transform translateY(0)
-  transition .5s
-  position absolute
+  transition 0.5s
+  position absolute 
   left 0
   bottom 0
   &.count-exit-active
     background green
-    transform translateY(-100%) scale(3)
+    transform translateY(-100%)

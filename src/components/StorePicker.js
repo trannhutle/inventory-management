@@ -1,8 +1,12 @@
 import React, { Fragment } from "react";
 import { format } from "url";
 import { getFunName } from "../helpers";
+import PropTypes from "prop-types";
 
 class StorePicker extends React.Component {
+  static propTypes = {
+    history: PropTypes.object
+  };
   // This is the reference to the input text
   myInput = React.createRef();
 
@@ -13,7 +17,7 @@ class StorePicker extends React.Component {
     // Get the text from the input
     const storeName = this.myInput.current.value;
     // Chagen the page to the router
-    this.props.history.push(`/store/${storeName}`)
+    this.props.history.push(`/store/${storeName}`);
   };
 
   render() {
